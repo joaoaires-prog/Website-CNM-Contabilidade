@@ -11,7 +11,7 @@ const Hero = () => {
       }}
     >
       {/* Background Overlay for text readability */}
-      <div className="absolute inset-0 bg-blue-900/70"></div>
+      *<div className="absolute inset-0 bg-blue-200/70"></div>
 
       {console.log("[v0] Hero component rendered with background image: /images/team-background.png")}
 
@@ -19,10 +19,10 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-blue-900">
               A hora de investir no sucesso da sua empresa é agora!
             </h1>
-            <p className="text-xl text-blue-100 leading-relaxed">
+            <p className="text-xl text-blue-900 leading-relaxed">
               Transforme sua gestão financeira com nossos serviços especializados em contabilidade empresarial.
             </p>
           </div>
