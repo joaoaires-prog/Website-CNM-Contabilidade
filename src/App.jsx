@@ -1,10 +1,10 @@
-import Header from "./Components/Header"
-import Hero from "./Components/Hero"
-import About from "./Components/Sobre"
-import Services from "./Components/Services"
-import Footer from "./Components/Footer"
+import Header from "./Components/Header.jsx"
+import Hero from "./Components/Hero.jsx"
+import About from "./Components/Sobre.jsx"
+import Services from "./Components/Services.jsx"
+import Footer from "./Components/Footer.jsx"
 import Whatsapp from "./Components/WhatsAppButton.jsx"
-import WhatsAppButton from "./Components/WhatsAppButton"
+import WhatsAppButton from "./Components/WhatsAppButton.jsx"
 import "./App.css"
 
 function App() {
