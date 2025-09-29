@@ -5,6 +5,7 @@ import Services from "./Components/Services.jsx"
 import Footer from "./Components/Footer.jsx"
 import Whatsapp from "./Components/WhatsAppButton.jsx"
 import WhatsAppButton from "./Components/WhatsAppButton.jsx"
+import FloatingInstagram from "./Components/FloatingInstagram"
 import "./App.css"
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <Footer />
       <Whatsapp />
+      <FloatingInstagram />
 
 
 
