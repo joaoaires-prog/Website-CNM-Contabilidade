@@ -21,6 +21,17 @@ const ContactForm = () => {
     e.preventDefault()
     console.log("Form submitted:", formData)
     // Aqui você adicionaria a lógica para enviar o formulário
+
+    // Reinicia o formulário
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    })
+
+    // Mostra alerta
+    alert("Solicitação enviada com sucesso!")
   }
 
   return (
@@ -45,7 +56,7 @@ const ContactForm = () => {
           <input
             type="email"
             name="email"
-            placeholder="Seu melhor e-mail"
+            placeholder="Seu e-mail"
             value={formData.email}
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
