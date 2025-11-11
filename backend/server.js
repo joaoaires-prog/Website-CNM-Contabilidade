@@ -29,13 +29,13 @@ app.post('/api/enviar-email', async (req, res) => {
   }
 
   try {
-    // --- ETAPA 1: SALVAR NO SUPABASE PRIMEIRO ---
+  
     const { data: dbData, error: dbError } = await supabase
       .from('leads_contato') 
       .insert([
         { 
           nome_completo: name, 
-          email: email,        // 'email' minúsculo (Corrigido)
+          email: email,       
           telefone: phone,     
           mensagem: message    
         }
@@ -48,12 +48,6 @@ app.post('/api/enviar-email', async (req, res) => {
     
     console.log('Contato salvo no Supabase com sucesso.');
     
-    // --- ETAPA 2: ENVIAR OS E-MAILS ---
-
-    // TAREFA A: Enviar notificação para VOCÊ
-    //
-    // vvvv HTML CORRIGIDO vvvv
-    //
     const { data: dataNotificacao, error: errorNotificacao } = await resend.emails.send({
       from: `Contato Site CNM <${emailRemetente}>`,
       to: seuEmail, 
@@ -69,9 +63,6 @@ app.post('/api/enviar-email', async (req, res) => {
         </ul>
       `
     });
-    //
-    // ^^^^ HTML CORRIGIDO ^^^^
-    //
 
     if (errorNotificacao) {
       console.error('Erro ao enviar notificação para o admin:', errorNotificacao);
@@ -79,10 +70,6 @@ app.post('/api/enviar-email', async (req, res) => {
       console.log('Notificação para o admin enviada com sucesso.');
     }
 
-    // TAREFA B: Enviar auto-resposta para o CLIENTE
-    //
-    // vvvv HTML CORRIGIDO vvvv
-    //
     const { data: dataCliente, error: errorCliente } = await resend.emails.send({
       from: `CNM Contabilidade <${emailRemetente}>`,
       to: email, 
@@ -98,10 +85,7 @@ app.post('/api/enviar-email', async (req, res) => {
       `,
       reply_to: seuEmail 
     });
-    //
-    // ^^^^ HTML CORRIGIDO ^^^^
-    //
-
+ 
     if (errorCliente) {
       console.error('Erro ao enviar auto-resposta para o cliente:', errorCliente);
       throw new Error(`Erro ao enviar ao cliente: ${errorCliente.message}`);
