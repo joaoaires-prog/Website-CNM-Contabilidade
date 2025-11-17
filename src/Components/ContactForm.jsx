@@ -46,11 +46,11 @@ function ContactForm() {
   };
 
   return (
-    <div className="bg-white text-gray-800 p-8 rounded-2xl shadow-lg text-center w-full max-w-md">
+    <div className="bg-white text-blue-800 p-8 rounded-2xl shadow-lg text-center w-full max-w-md">
       <h3 className="text-xl font-bold mb-6">Entre em contato agora mesmo</h3>
       <form onSubmit={handleSubmit}>
         <div className="text-left mb-4">
-          <label htmlFor="name" className="block mb-1 text-sm text-gray-600">
+          <label htmlFor="name" className="block mb-1 text-sm text-blue-800">
             Nome *
           </label>
           <input
@@ -64,7 +64,7 @@ function ContactForm() {
           />
         </div>
         <div className="text-left mb-4">
-          <label htmlFor="email" className="block mb-1 text-sm text-gray-600">
+          <label htmlFor="email" className="block mb-1 text-sm text-blue-800">
             Email *
           </label>
           <input
@@ -78,7 +78,7 @@ function ContactForm() {
           />
         </div>
         <div className="text-left mb-6">
-          <label htmlFor="phone" className="block mb-1 text-sm text-gray-600">
+          <label htmlFor="phone" className="block mb-1 text-sm text-blue-800">
             Telefone *
           </label>
           <input
@@ -92,7 +92,7 @@ function ContactForm() {
           />
         </div>
         <div className="text-left mb-6">
-          <label htmlFor="message" className="block mb-1 text-sm text-gray-600">
+          <label htmlFor="message" className="block mb-1 text-sm text-blue-800">
             Como podemos ajudar?
           </label>
           <textarea
